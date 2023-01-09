@@ -1,0 +1,30 @@
+{
+  "name": "garaje-docker-course",
+  "version": "0.0.1",
+  "description": "Small nodejs app to showcase docker and docker-compose usage",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdvr/garaje-docker-course.git"
+  },
+  "keywords": [
+    "docker",
+    "nodejs",
+    "expressjs",
+    "postgresql"
+  ],
+  "author": "jdvr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdvr/garaje-docker-course/issues"
+  },
+  "homepage": "https://github.com/jdvr/garaje-docker-course#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "pg": "^8.8.0"
+  }
+}
