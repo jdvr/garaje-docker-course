@@ -4,7 +4,8 @@
   "description": "Small nodejs app to showcase docker and docker-compose usage",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

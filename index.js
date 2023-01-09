@@ -19,6 +19,18 @@ const findAllQuery =  'SELECT * FROM IDEA';
 const client = new Client({ connectionString });
 client.connect();
 
+client.query(`
+CREATE TABLE IF NOT EXISTS IDEA (
+    ID SERIAL PRIMARY KEY,
+    TITLE VARCHAR(25) NOT NULL,
+    DESCRIPTION VARCHAR(150) NOT NULL
+);
+`, [], (err) => {
+    if (err) {
+        console.error(err);
+    }
+})
+
 
 app.post('/idea', (req, res) => {
     const { title, description } = req.body;
@@ -57,7 +69,7 @@ function readDBConfigFromEnv() {
     const dbName = process.env.DB_NAME
     const dbPass = process.env.DB_PASS
     const dbHost = process.env.DB_HOST || 'localhost'
-    const dbPort = process.env.DB_HOST || 5432
+    const dbPort = process.env.DB_PORT || 5432
 
     return {
         userName, dbName, dbPass, dbHost, dbPort
