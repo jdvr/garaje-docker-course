@@ -1,0 +1,15 @@
+## Create idea
+POST http://localhost:3000/idea
+Content-Type: application/json
+
+{
+  "title": "My idea {{$random.alphabetic(5)}}",
+  "description": "{{$random.alphabetic(100)}}"
+}
+
+###
+
+## Read ideas
+GET http://localhost:3000/ideas
+Accept: application/json
+
