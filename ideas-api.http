@@ -1,4 +1,4 @@
-## Create idea
+### Create idea
 POST http://localhost:3000/idea
 Content-Type: application/json
 
@@ -7,9 +7,7 @@ Content-Type: application/json
   "description": "{{$random.alphabetic(100)}}"
 }
 
-###
-
-## Read ideas
+### Read ideas
 GET http://localhost:3000/ideas
 Accept: application/json
 
