@@ -11,3 +11,5 @@ Content-Type: application/json
 GET http://localhost:3000/ideas
 Accept: application/json
 
+### Health
+GET http://localhost:3000/
