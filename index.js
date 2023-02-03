@@ -60,6 +60,9 @@ app.get('/ideas', (req, res) => {
         res.json(result.rows);
     });
 })
+
+app.get('/', (req, res) => res.json({health: "OK"}))
+app.get('/_health', (req, res) => res.json({health: "OK"}))
 app.listen(3000, () => {
     console.log('Server listening on port 3000');
 });
